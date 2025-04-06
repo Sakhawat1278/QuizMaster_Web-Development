@@ -1,0 +1,389 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ad89ca, #4e84d4);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #f56b00;
+    color: white;
+}
+
+/* Dashboard Content */
+.dashboard-container {
+    padding: 100px 30px 30px;
+}
+
+/* Welcome Box */
+.welcome-box {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.welcome-box h2 {
+    color: #333;
+}
+
+.welcome-box h1 {
+    font-size: 50px;
+    color: #e04e4e;
+}
+
+.welcome-box p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Add Questions Box */
+.add-questions-box,
+.view-questions-box {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.add-questions-box h3,
+.view-questions-box h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #d83a54;
+}
+
+/* Buttons */
+.btn {
+    background-color: #db3e58;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f56b00;
+}
+
+/* Animation for question addition */
+.question-box {
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.question-box h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.question-box .form-group {
+    margin-bottom: 15px;
+}
+
+.question-box input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
+
+/* Questions List */
+.questions-list {
+    margin-top: 30px;
+}
+
+.question-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.question-item h4 {
+    font-size: 20px;
+    color: #333;
+}
+
+.question-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.question-item ul li {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.question-item .edit-btn,
+.question-item .delete-btn {
+    background-color: #ffafbd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.question-item .edit-btn:hover {
+    background-color: #f56b00;
+}
+
+.question-item .delete-btn {
+    background-color: #ff5050;
+}
+
+.question-item .delete-btn:hover {
+    background-color: #e04e4e;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #282828;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Transitions and Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover Effects */
+.header .logo-container:hover {
+    animation: bounceIn 0.5s ease;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 80px 20px 20px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .header .nav-links {
+        display: none;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .question-box input[type="text"] {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+.total-students-box {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-students-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.total-students-box p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
